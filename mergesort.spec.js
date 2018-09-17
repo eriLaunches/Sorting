@@ -8,9 +8,15 @@ describe('Split Array function', function() {
 describe('Merge function', function(){
   it('is able to merge two sorted arrays into one sorted array', function(){
     // test the merging algorithm
-    expect( merge ([2],[5])).toEqual([2,5]);
-    expect( merge ([2,5],[7,1])).toEqual([2,5,1,7]);
-    expect( merge ([3,20],[15])).toEqual([3,20,15]);
+    expect( merge ([2],[5,7])).toEqual([2,5,7]);
+    expect( merge ([7],[1])).toEqual([1,7]);
+    expect( merge ([2,5],[1,7])).toEqual([1,2,5,7]);
+    expect( merge ([3,20])).toEqual([3,20]);
+    expect( merge ([15])).toEqual([15]);
+    expect( merge ([3,20],[15])).toEqual([3,15,20]);
+    expect( merge ([2,5,1,7],[3,15,20])).toEqual([1,2,3,5,7,15,20]);
   });
+
+
 });
 
